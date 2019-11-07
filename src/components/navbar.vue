@@ -1,59 +1,75 @@
 <template>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button
-          type="button"
-          class="navbar-toggle collapsed"
-          data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <router-link to="/" class="navbar-brand">Term Insurance</router-link>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li>
-            <router-link to="/">Home</router-link>
-          </li>
-          <li class="dropdown">
-            <a
-              href="#"
-              class="dropdown-toggle"
-              data-toggle="dropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Health Insurance
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <router-link to="#">Action 01</router-link>
-              </li>
-              <li>
-                <router-link to="#">Action 02</router-link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <router-link to="#">Claim</router-link>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="/">
+   <img src="../assets/tp-logo-png.png" width="30" height="30" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav nav-spacing">      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Life Insurance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">LI-1</a>
+          <a class="dropdown-item" href="#">LI-2</a>
+          <a class="dropdown-item" href="#">LI-3</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Health Insurance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">HI-1</a>
+          <a class="dropdown-item" href="#">HI-2</a>
+          <a class="dropdown-item" href="#">HI-3</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Motor Insurance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">MI-1</a>
+          <a class="dropdown-item" href="#">MI-2</a>
+          <a class="dropdown-item" href="#">MI-3</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Other Insurance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">OI-1</a>
+          <a class="dropdown-item" href="#">OI-2</a>
+          <a class="dropdown-item" href="#">OI-3</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Support
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">S-1</a>
+          <a class="dropdown-item" href="#">S-2</a>
+          <a class="dropdown-item" href="#">S-3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="#">Claim</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="#">Renewal</router-link>
+      </li>
+      <li class="nav-item active">
+        <router-link class="nav-link" to="/">My Account <span class="sr-only">(current)</span></router-link>
+      </li>
+    </ul>
+  </div>
+</nav>
 </template>
 
 <script>
@@ -62,4 +78,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.nav-spacing li{
+ padding-left: 10px !important;
+ padding-right: 10px !important;
+}
+</style>>

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>Term InsurancePlans in India</h1>
-    <SearchPlan v-on:search-plan="searchplan" />
-    <table class="table table-bordered">
-      <thead class="table-primary">
+  <div class="row">
+    <h3 class="mt-3 mb-3">Term Insurance Plans in India</h3>
+    <SearchPlan v-on:search-plan="searchplan" class="mb-3" />
+    <table class="table table-bordered table-hover table-sm">
+      <thead class="table-info">
         <tr>
           <th scope="col">Insurers</th>
           <th scope="col">Term Plans</th>
@@ -42,7 +42,7 @@ export default {
     searchplan(plan) {
       console.log("In searchplan " + plan);
       this.filteredPlan = plan
-        ? this.planDetails.filter(f => f.Insurers == plan)
+        ? this.planDetails.filter(f => f.Insurers.includes(plan))
         : this.planDetails;
     }
   },
